@@ -1,0 +1,15 @@
+{
+  "highlight": true,
+  "timeformat": "%Y-%m-%d %H:%M", 
+  "editor": "nvim",
+  "default_minute": 0,
+  "encrypt": false,
+  "default_hour": 9,
+  "tagsymbols": "@",
+  "linewrap": 79,
+  "journals": {
+    "default": "/home/christopher/repos/jrnl/journal.txt",
+    "dreams": "/home/christopher/repos/jrnl/dreams.txt",
+    "work": "/home/christopher/repos/jrnl/work.txt"
+  }
+}

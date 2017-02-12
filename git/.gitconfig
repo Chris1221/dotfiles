@@ -1,0 +1,10 @@
+[user]
+	email = chris.c.1221@gmail.com
+	name = Chris1221
+	signingkey = DE3CCAEFF1634E62
+[commit]
+	gpgsign = true
+[alias]
+	apply-gitignore = !git ls-files -ci --exclude-standard -z | xargs -0r git rm --cached
+
+
