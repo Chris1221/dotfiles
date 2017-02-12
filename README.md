@@ -12,7 +12,7 @@ cd dotfiles
 stow -t ~/ nvim tmux zsh
 ```
 
-And that's it! Note that I usually `alias stow -t ~/`. 
+And that's it! Note that I usually `alias stow=stow -t ~/`. 
 
 I've also included a list of packages installed by `pacman` and `yaourt`. To install all of these, first stow it to `$HOME` then feed it to `pacman`:
 
