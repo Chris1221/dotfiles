@@ -1,19 +1,25 @@
 This is a repository of my personal system configuration files. It's managed by `GNU stow` so if you want to install any of the individual program's settings (i.e. emulate my `nvim`, `tmux`, and `zsh` themes), first install `stow`:
 
-	sudo pacman -S stow
+```sh
+sudo pacman -S stow
+```
 
 Clone the repository, then create simlinks from the repository to your home directory:
 
-	git clone git@github.com:Chris1221/dotfiles.git
-	cd dotfiles
-	stow -t ~/ nvim tmux zsh # the -t option forces sim links in $HOME
+```sh
+git clone git@github.com:Chris1221/dotfiles.git
+cd dotfiles
+stow -t ~/ nvim tmux zsh
+```
 
 And that's it! Note that I usually `alias stow -t ~/`. 
 
 I've also included a list of packages installed by `pacman` and `yaourt`. To install all of these, first stow it to `$HOME` then feed it to `pacman`:
 
-	stow pacman
-	for x in $(cat ~/pacman_package_list.txt); do pacman -S $x; done
+```sh
+stow pacman
+for x in $(cat ~/pacman_package_list.txt); do pacman -S $x; done
+```
 
 You probably don't want to do that unless you're me though. 
 
