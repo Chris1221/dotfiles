@@ -1,3 +1,6 @@
 [submodule "oh_my_tmux"]
 	path = oh_my_tmux
 	url = git@github.com:gpakosz/.tmux
+[submodule "ssh_conf"]
+	path = ssh_conf
+	url = git@github.com:Chris1221/ssh_conf.git
