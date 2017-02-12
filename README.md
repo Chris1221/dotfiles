@@ -8,6 +8,13 @@ Clone the repository, then create simlinks from the repository to your home dire
 	cd dotfiles
 	stow -t ~/ nvim tmux zsh # the -t option forces sim links in $HOME
 
-And that's it! 
+And that's it! Note that I usually `alias stow -t ~/`. 
+
+I've also included a list of packages installed by `pacman` and `yaourt`. To install all of these, first stow it to `$HOME` then feed it to `pacman`:
+
+	stow pacman
+	for x in $(cat ~/pacman_package_list.txt); do pacman -S $x; done
+
+You probably don't want to do that unless you're me though. 
 
 Mostly for my own use when transfering systems and keeping my dotfiles under VC but anyone is free to tinker.
