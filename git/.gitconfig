@@ -7,4 +7,7 @@
 [alias]
 	apply-gitignore = !git ls-files -ci --exclude-standard -z | xargs -0r git rm --cached
 
+[url "git@github.com:"]
+	insteadOf = "gh:"
+
 
