@@ -96,3 +96,4 @@ alias jrnlmk="make -C ~/repos/jrnl"
 # Set default behaviour of stow to work in root
 
 alias stow='stow -t ~/'
+alias vim=nvim
