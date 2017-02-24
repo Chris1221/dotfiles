@@ -27,7 +27,7 @@ Mostly for my own use when transfering systems and keeping my dotfiles under VC 
 
 ------------------------------------
 
-General system configurations / defaults:
+## Programs
 
 - **Browser**: Firefox
 	- LastPass
@@ -43,3 +43,5 @@ General system configurations / defaults:
 	- `vundle` package manager
 - **Multiplexer**: Byobu
 	- *very non default behaviour, read the `tmux/.tmux.conf`
+- **Journal:** `jrnl`
+- **Task Manager:** Task warrior (`task`)
