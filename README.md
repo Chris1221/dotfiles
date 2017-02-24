@@ -24,3 +24,22 @@ for x in $(cat ~/pacman_package_list.txt); do pacman -S $x; done
 You probably don't want to do that unless you're me though. 
 
 Mostly for my own use when transfering systems and keeping my dotfiles under VC but anyone is free to tinker.
+
+------------------------------------
+
+General system configurations / defaults:
+
+- **Browser**: Firefox
+	- LastPass
+	- uBlock Origin
+	- RES / Mod toolkit
+- **Terminal**: Default Arch terminal
+	- Guake
+- **Shell**: Zsh with Oh My Zsh 
+	- Config file in `zsh/`
+- **Conky Theme**: *None, I hate conky*
+- `$EDITOR`: `neovim`
+	- `delek` colorscheme
+	- `vundle` package manager
+- **Multiplexer**: Byobu
+	- *very non default behaviour, read the `tmux/.tmux.conf`
