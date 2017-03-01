@@ -97,3 +97,6 @@ alias jrnlmk="make -C ~/repos/jrnl"
 
 alias stow='stow -t ~/'
 alias vim=nvim
+
+# Use VIM shortcuts on the terminal instead of EMACS
+bindkey -v
