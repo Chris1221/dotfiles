@@ -45,3 +45,4 @@ Mostly for my own use when transfering systems and keeping my dotfiles under VC 
 	- *very non default behaviour, read the `tmux/.tmux.conf`
 - **Journal:** `jrnl`
 - **Task Manager:** Task warrior (`task`)
+- **Anki**: Download and install [here](https://apps.ankiweb.net/downloads/current/anki-2.0.43-amd64.tar.bz2). Version on AUR didn't work for me; cites QtWebKit which is already installed, maybe a wrong version or something.
