@@ -100,3 +100,5 @@ alias vim=nvim
 
 # Use VIM shortcuts on the terminal instead of EMACS
 bindkey -v
+
+alias less='less -S'
