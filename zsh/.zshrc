@@ -102,3 +102,7 @@ alias vim=nvim
 bindkey -v
 
 alias less='less -S'
+
+# Alias for task list to make it a little easier
+alias tl="task list"
+alias ta="task add"
