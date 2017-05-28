@@ -18,7 +18,7 @@
 #upload_rate = 0
 
 # Default directory to save the downloaded torrents.
-#directory = ./
+directory = ~/Downloads/
 
 # Default session directory. Make sure you don't run multiple instance
 # of rtorrent using the same session directory. Perhaps using a
@@ -82,3 +82,8 @@
 # Enable peer exchange (for torrents not marked private)
 #
 # peer_exchange = yes
+
+# Point to a directory where rTorrent will save the torrent files. You
+# may also use relative paths if you want different session
+# directories depending on where you execute rtorrent.
+session.path.set = ~/Download/session
