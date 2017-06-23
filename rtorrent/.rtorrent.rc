@@ -86,4 +86,4 @@ directory = ~/Downloads/
 # Point to a directory where rTorrent will save the torrent files. You
 # may also use relative paths if you want different session
 # directories depending on where you execute rtorrent.
-session.path.set = ~/Download/session
+#session.path.set = ~/Download/session
