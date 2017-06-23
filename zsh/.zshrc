@@ -106,3 +106,5 @@ alias less='less -S'
 # Alias for task list to make it a little easier
 alias tl="task list"
 alias ta="task add"
+
+alias Rd="R-devel --quiet"
