@@ -108,3 +108,6 @@ alias tl="task list"
 alias ta="task add"
 
 alias Rd="R-devel --quiet"
+
+# For some reason incremental search stopped working so reenable it
+bindkey '^R' history-incremental-search-backward
