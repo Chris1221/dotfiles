@@ -111,3 +111,9 @@ alias Rd="R-devel --quiet"
 
 # For some reason incremental search stopped working so reenable it
 bindkey '^R' history-incremental-search-backward
+
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+        export TERM='xterm-256color'
+else
+        export TERM='xterm-color'
+fi
