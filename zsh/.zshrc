@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/christopher/.oh-my-zsh
+  export ZSH=/Users/ccole/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -51,7 +51,11 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+	git
+	osx
+	ssh-agent
+	)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -85,7 +89,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
-alias open=gvfs-open
 
 export VISUAL="nvim"
 
@@ -112,8 +115,12 @@ alias Rd="R-devel --quiet"
 # For some reason incremental search stopped working so reenable it
 bindkey '^R' history-incremental-search-backward
 
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-        export TERM='xterm-256color'
-else
-        export TERM='xterm-color'
-fi
+#if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+#        export TERM='xterm-256color'
+#else
+#        export TERM='xterm-color'
+#fi
+
+DEFAULT_USER="ccole"
+
+export TERM=xterm-256color

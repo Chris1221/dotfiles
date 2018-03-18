@@ -1,43 +1,61 @@
-colorscheme delek
-set mouse-=a
-
-let R_in_buffer = 0
-let R_tmux_split = 1
-
-set t_Co=256
-
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'junegunn/goyo.vim'
-Plug  'junegunn/limelight.vim'
+Plug 'jalvesaq/Nvim-R'
+Plug 'junegunn/goyo.vim' 
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'majutsushi/tagbar'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'vim-latex/vim-latex'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
-" Color name (:help cterm-colors) or ANSI code
-let g:limelight_conceal_ctermfg = 'black'
+let R_in_buffer = 0
+   let R_applescript = 0
+   let R_tmux_split = 1
 
-" Color name (:help gui-colors) or RGB color
-let g:limelight_conceal_guifg = 'black'
+set background=dark
 
-" Default: 0.5
-let g:limelight_default_coefficient = 0.7
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
-" Number of preceding/following paragraphs to include (default: 0)
-let g:limelight_paragraph_span = 1
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
 
-" Beginning/end of paragraph
-"   When there's no empty line between the paragraphs
-"   and each paragraph starts with indentation
-let g:limelight_bop = '^\s'
-let g:limelight_eop = '\ze\n^\s'
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
-" Highlighting priority (default: 10)
-"   Set it to -1 not to overrule hlsearch
-let g:limelight_priority = -1
+map <C-t> :NERDTreeToggle<CR>
+map <C-m> :TagbarToggle<CR>
 
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-autocmd! User GoyoEnter GitGutterEnable
-autocmd! User GoyoLeave GitGutterDisable
+set fillchars+=stl:\ ,stlnc:\
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+
+let g:airline_powerline_fonts = 1
+
+set t_Co=256
+highlight Normal ctermbg=NONE
+
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>  
+
+set mouse=a
+
+colorscheme delek
+
+let tlist_r_settings = 'R;f:Functions;g:GlobalVariables;v:FunctionVariables'
+
+let g:airline_theme='deus'
