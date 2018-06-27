@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Path to the bash it configuration
-export BASH_IT="/users/myers/ccole/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
@@ -64,5 +63,3 @@ export LANG=en_US.UTF-8
 #  eval `ssh-agent -s`
  # ssh-add ~/.ssh/cluster_github
 #fi
-
-export PERL5LIB=/users/myers/ccole/bin/vcftools/src/perl
