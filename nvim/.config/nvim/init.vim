@@ -13,12 +13,13 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Valloric/YouCompleteMe'
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'jalvesaq/Nvim-R'
+Plug 'gaalcaras/ncm-R'
 call plug#end()
 
-let R_in_buffer = 0
-   let R_applescript = 0
-   let R_tmux_split = 1
+let R_source = '~/repos/dotfiles/nvim/tmux_split.vim'
 
 set background=dark
 

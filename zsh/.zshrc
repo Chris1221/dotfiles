@@ -124,3 +124,13 @@ bindkey '^R' history-incremental-search-backward
 DEFAULT_USER="ccole"
 
 export TERM=xterm-256color
+
+alias emacs='/usr/local/bin/emacs -nw'
+
+muteFacetime() {
+	printf "p *(char*)(void(*)())AudioDeviceDuck=0xc3\nq" | lldb -n FaceTime
+}
+
+# Make sure to add in port
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+alias less="/usr/local/Cellar/less/530/bin/less"
