@@ -17,11 +17,20 @@ Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'jalvesaq/Nvim-R'
 Plug 'gaalcaras/ncm-R'
+Plug 'sirver/UltiSnips'
+Plug 'ncm2/ncm2-ultisnips'
+Plug 'lervag/vimtex'
 call plug#end()
 
 let R_source = '~/repos/dotfiles/nvim/tmux_split.vim'
+  vmap <Space> <Plug>RDSendSelection
+   nmap <Space> <Plug>RDSendLine
 
 set background=dark
+
+filetype plugin on
+filetype indent on
+let g:text_flavor='latex'
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -60,3 +69,7 @@ colorscheme delek
 let tlist_r_settings = 'R;f:Functions;g:GlobalVariables;v:FunctionVariables'
 
 let g:airline_theme='deus'
+
+" for next item insert in latex
+imap <C-I> <Plug>Tex_InsertItemOnThisLine
+imap <C-L> <Plug>Tex_LeftRight
