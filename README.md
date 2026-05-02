@@ -19,7 +19,7 @@ I alias `stow='stow -t ~/'` to avoid repeating the target flag.
 | `nvim/` | Neovim | `vim-plug` plugins; R, LaTeX, C++ support |
 | `tmux/` | tmux | Custom status bar and pane bindings |
 | `zsh/` | Zsh | Oh My Zsh, `robbyrussell` theme |
-| `git/` | Git | Global gitconfig |
+| `git/` | Git | Global gitconfig; machine-specific and sensitive settings (signing key, email) go in `~/.gitconfig.local` (not committed) |
 | `R/` | R | `.Rprofile` |
 | `latexmk/` | latexmk | `.latexmkrc` |
 
