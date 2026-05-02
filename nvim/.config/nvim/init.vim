@@ -8,8 +8,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'vim-latex/vim-latex'
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
+Plug 'nvim-tree/nvim-tree.lua'
+Plug 'nvim-tree/nvim-web-devicons'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -43,7 +43,8 @@ let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-map <C-t> :NERDTreeToggle<CR>
+lua pcall(function() require('nvim-tree').setup() end)
+map <C-t> :NvimTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
 
 set fillchars+=stl:\ ,stlnc:\
@@ -56,15 +57,13 @@ let g:airline_symbols.space = "\ua0"
 let g:airline_powerline_fonts = 1
 
 set t_Co=256
-highlight Normal ctermbg=NONE
-
 map gn :bn<cr>
 map gp :bp<cr>
-map gd :bd<cr>  
+map gd :bd<cr>
 
 set mouse=a
 
-colorscheme delek
+colorscheme habamax
 
 let tlist_r_settings = 'R;f:Functions;g:GlobalVariables;v:FunctionVariables'
 

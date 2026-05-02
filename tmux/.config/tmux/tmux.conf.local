@@ -6,6 +6,10 @@
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
 
+set -g @treemux-tree-client 'nvim-tree'  # or 'neo-tree'
+set -g @treemux-tree-nvim-init-file '~/.config/tmux/plugins/treemux/configs/treemux_init.lua'
+set -g @plugin 'kiyoon/treemux'
+
 
 # -- bindings ------------------------------------------------------------------
 
@@ -387,7 +391,7 @@ tmux_conf_urlscan_options="--compact --dedupe"
 #set -g history-limit 10000
 
 # start with mouse mode enabled
-#set -g mouse on
+set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -507,14 +511,3 @@ tmux_conf_uninstall_plugins_on_reload=true
 # "$@"
 # # /!\ do not remove the previous line
 # #     do not write below this line
-
-
-
-set -g default-terminal "screen-256color"
-set -g mouse on
-
-set-option -g visual-activity off
-set-option -g visual-bell off
-set-option -g visual-silence off
-set-window-option -g monitor-activity off
-set-option -g bell-action none
