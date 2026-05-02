@@ -1,48 +1,26 @@
-This is a repository of my personal system configuration files. It's managed by `GNU stow` so if you want to install any of the individual program's settings (i.e. emulate my `nvim`, `tmux`, and `zsh` themes), first install `stow`:
+Personal system configuration files managed with [`GNU stow`](https://www.gnu.org/software/stow/).
 
-```sh
-sudo pacman -S stow
-```
+## Installation
 
-Clone the repository, then create simlinks from the repository to your home directory:
+Install `stow`, clone the repo, then symlink whichever configs you want:
 
 ```sh
 git clone git@github.com:Chris1221/dotfiles.git
 cd dotfiles
-stow -t ~/ nvim tmux zsh
+stow -t ~/ nvim tmux zsh git
 ```
 
-And that's it! Note that I usually `alias stow=stow -t ~/`. 
+I alias `stow='stow -t ~/'` to avoid repeating the target flag.
 
-I've also included a list of packages installed by `pacman` and `yaourt`. To install all of these, first stow it to `$HOME` then feed it to `pacman`:
+## Configs
 
-```sh
-stow pacman
-for x in $(cat ~/pacman_package_list.txt); do pacman -S $x; done
-```
+| Directory | Program | Notes |
+|---|---|---|
+| `nvim/` | Neovim | `vim-plug` plugins; R, LaTeX, C++ support |
+| `tmux/` | tmux | Custom status bar and pane bindings |
+| `zsh/` | Zsh | Oh My Zsh, `robbyrussell` theme |
+| `git/` | Git | Global gitconfig |
+| `R/` | R | `.Rprofile` |
+| `latexmk/` | latexmk | `.latexmkrc` |
 
-You probably don't want to do that unless you're me though. 
-
-Mostly for my own use when transfering systems and keeping my dotfiles under VC but anyone is free to tinker.
-
-------------------------------------
-
-## Programs
-
-- **Browser**: Firefox
-	- LastPass
-	- uBlock Origin
-	- RES / Mod toolkit
-- **Terminal**: Default Arch terminal
-	- Guake
-- **Shell**: Zsh with Oh My Zsh 
-	- Config file in `zsh/`
-- **Conky Theme**: *None, I hate conky*
-- `$EDITOR`: `neovim`
-	- `delek` colorscheme
-	- `vundle` package manager
-- **Multiplexer**: Byobu
-	- *very non default behaviour, read the `tmux/.tmux.conf`
-- **Journal:** `jrnl`
-- **Task Manager:** Task warrior (`task`)
-- **Anki**: Download and install [here](https://apps.ankiweb.net/downloads/current/anki-2.0.43-amd64.tar.bz2). Version on AUR didn't work for me; cites QtWebKit which is already installed, maybe a wrong version or something.
+Mostly for my own use when transferring systems, but anyone is free to tinker.
