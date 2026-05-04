@@ -9,6 +9,7 @@
 set -g @treemux-tree-client 'nvim-tree'  # or 'neo-tree'
 set -g @treemux-tree-nvim-init-file '~/.config/tmux/plugins/treemux/configs/treemux_init.lua'
 set -g @plugin 'kiyoon/treemux'
+set-hook -g after-new-session 'run-shell "[ -n \"#{@treemux-key-Tab}\" ] && ~/.config/tmux/plugins/treemux/scripts/toggle.sh \"#{@treemux-key-Tab}\" \"#{pane_id}\" || true"'
 
 
 # -- bindings ------------------------------------------------------------------
