@@ -113,3 +113,4 @@ if [ -f '/home/chris/google-cloud-sdk/path.zsh.inc' ]; then . '/home/chris/googl
 if [ -f '/home/chris/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/chris/google-cloud-sdk/completion.zsh.inc'; fi
 
 alias vim='nvim'
+alias ts='sudo tailscale down; sudo tailscale up'

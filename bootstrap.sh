@@ -58,6 +58,11 @@ else
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
+# Check if gh is installed, otherwise install it 
+if ! command -v gh &> /dev/null; then 
+    echo "gh not installed but it should be"
+fi
+
 # Check if stow is installed, if not just prompt the user
 if ! command -v stow &> /dev/null; then
     echo "stow could not be found. Please install stow and run this script again."
@@ -66,6 +71,6 @@ fi
 
 
 
-stow --target $HOME zsh latexmk git tmux nvim
+stow --target $HOME zsh latexmk tmux nvim
 
 echo "Installation complete. Please restart your terminal or run 'source ~/.zshrc' to apply the changes."
